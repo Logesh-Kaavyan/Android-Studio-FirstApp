@@ -1,6 +1,13 @@
 package com.example.myapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +23,31 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val greetingTextView = findViewById<TextView>(R.id.textView)
+        val inputField = findViewById<EditText>(R.id.Name)
+        val submitButton = findViewById<Button>(R.id.button1)
+        val offerButton = findViewById<Button>(R.id.btnOffer)
+        var enteredName = ""
+        submitButton.setOnClickListener {
+            enteredName = inputField.text.toString()
+            if (enteredName == ""){
+                Toast.makeText(this@MainActivity,"Please, Enter your name",Toast.LENGTH_SHORT).show()
+                greetingTextView.text = ""
+                offerButton.visibility = INVISIBLE
+            }
+            else {
+                val message = "Welcome $enteredName"
+                greetingTextView.text = message
+                inputField.text.clear()
+                offerButton.visibility = VISIBLE
+            }
+        }
+
+        offerButton.setOnClickListener {
+            val intent = Intent(this,SecondActivity::class.java)
+            intent.putExtra("USER",enteredName)
+            startActivity(intent)
+        }
+
     }
 }
