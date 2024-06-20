@@ -3,4 +3,11 @@
     <string name="welcome">Hello World!</string>
     <string name="hintname">Type your Name here</string>
     <string name="hintpass">Password</string>
+    <string name="intent_intro">Here are actions you can perform right now!</string>
+    <string name="dial">Dial a Number</string>
+    <string name="alarm">Set an alarm</string>
+    <string name="timer">Set a timer</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="timer_title">Timer</string>
+    <string name="greeting">Hello!</string>
 </resources>
