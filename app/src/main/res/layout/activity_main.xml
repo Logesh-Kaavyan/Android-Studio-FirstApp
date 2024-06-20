@@ -55,7 +55,7 @@
         android:id="@+id/btnOffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Offer"
+        android:text="Sign up"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"

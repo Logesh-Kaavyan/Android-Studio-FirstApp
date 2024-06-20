@@ -19,7 +19,7 @@ class SecondActivity : AppCompatActivity() {
         }
         val username = intent.getStringExtra("USER")
         val offerMessage = findViewById<TextView>(R.id.offerText)
-        val message = "Hi $username, you will get access to all content for one month as your free trail"
+        val message = "Hello $username, you will get access to all content for one month as your free trail"
         offerMessage.text = message
     }
 }
