@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="welcome">வணக்கம்</string>
+    <string name="hintname">உங்கள் பெயரை உள்ளிடவும்</string>
+    <string name="hintpass">பின்னை உள்ளிடவும்</string>
 </resources>

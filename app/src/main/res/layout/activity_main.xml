@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Type your Name here"
+        android:hint="@string/hintname"
         android:inputType="text"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Sign In"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,20 +49,19 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        app:layout_constraintVertical_bias="0.63" />
 
-    <Button
-        android:id="@+id/btnOffer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/hintpass"
+        android:inputType="textPassword"
         android:textSize="24sp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

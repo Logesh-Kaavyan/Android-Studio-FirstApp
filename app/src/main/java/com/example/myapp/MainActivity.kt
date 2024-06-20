@@ -23,31 +23,30 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val greetingTextView = findViewById<TextView>(R.id.textView)
         val inputField = findViewById<EditText>(R.id.Name)
+        val password = findViewById<EditText>(R.id.password)
         val submitButton = findViewById<Button>(R.id.button1)
-        val offerButton = findViewById<Button>(R.id.btnOffer)
         var enteredName = ""
+        var pass = ""
         submitButton.setOnClickListener {
             enteredName = inputField.text.toString()
+            pass = password.text.toString()
             if (enteredName == ""){
                 Toast.makeText(this@MainActivity,"Please, Enter your name",Toast.LENGTH_SHORT).show()
-                greetingTextView.text = ""
-                offerButton.visibility = INVISIBLE
             }
             else {
-                val message = "Welcome $enteredName"
-                greetingTextView.text = message
-                inputField.text.clear()
-                offerButton.visibility = VISIBLE
+                if (pass == "1234") {
+                    val intent = Intent(this,SecondActivity::class.java)
+                    intent.putExtra("USER",enteredName)
+                    startActivity(intent)
+                }
+                else {
+                    Toast.makeText(this@MainActivity,"Incorrect Password",Toast.LENGTH_SHORT).show()
+                    password.text.clear()
+                }
             }
         }
 
-        offerButton.setOnClickListener {
-            val intent = Intent(this,SecondActivity::class.java)
-            intent.putExtra("USER",enteredName)
-            startActivity(intent)
-        }
 
     }
 }
